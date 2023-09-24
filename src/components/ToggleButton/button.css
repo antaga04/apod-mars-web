@@ -1,0 +1,103 @@
+/* ------------------- */
+span.switcher {
+  position: relative;
+
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+input {
+  appearance: none;
+
+  position: relative;
+
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+
+  background-color: var(--black);
+  outline: none;
+}
+
+input:before,
+input:after {
+  z-index: 2;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: var(--white);
+}
+
+input:before {
+  content: 'ON';
+  left: 20px;
+}
+
+input:after {
+  content: 'OFF';
+  right: 20px;
+}
+
+
+label {
+  z-index: 1;
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+
+  border-radius: 20px;
+}
+
+span.switcher-1 input {
+  transition: .25s -.1s;
+}
+
+span.switcher-1 input:checked {
+  background-color: var(--white);
+}
+
+span.switcher-1 input:checked:before {
+  color: var(--white);
+  transition: color .5s .2s;
+}
+
+span.switcher-1 input:checked:after {
+  color: var(--grey);
+  transition: color .5s;
+}
+
+span.switcher-1 input:checked+label {
+  left: 10px;
+  right: 60px;
+
+  background: var(--black);
+
+  transition: left .5s, right .4s .2s;
+}
+
+span.switcher-1 input:not(:checked) {
+  background: var(--black);
+  transition: background .5s -.1s;
+}
+
+span.switcher-1 input:not(:checked):before {
+  color: var(--grey);
+  transition: color .5s;
+}
+
+span.switcher-1 input:not(:checked):after {
+  color: var(--black);
+  transition: color .5s .2s;
+}
+
+span.switcher-1 input:not(:checked)+label {
+  left: 60px;
+  right: 10px;
+
+  background: var(--white);
+
+  transition: left .4s .2s, right .5s, background .35s -.1s;
+}

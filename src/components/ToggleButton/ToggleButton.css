@@ -1,0 +1,79 @@
+.theme-btn {
+  background-color: rgba(91, 91, 91, .45);
+  border-radius: 2em;
+  padding: 0em;
+
+  border: none;
+  fill: var(--color4);
+
+  display: flex;
+  align-items: center;
+}
+
+.theme-btn div {
+  padding: 1em;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+  gap: 3.5em;
+  position: relative;
+  transition: .25s -.1s;
+}
+
+.switch {
+  z-index: 1;
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+#moon,
+#sun {
+  z-index: 2;
+}
+
+#moon {
+  margin-right: 7px;
+}
+
+#sun {
+  margin-left: 7px;
+}
+
+.dark .theme-btn {
+  background-color: var(--black);
+}
+
+.dark .switch {
+  left: 80px;
+  right: 10px;
+  transition: left .4s .2s, right .5s, background .35s -.1s;
+}
+
+.dark #moon {
+  fill: var(--btn-detail);
+  transition: color .5s .2s;
+}
+
+.dark #sun {
+  transition: fill .5s;
+}
+
+.light .switch {
+  left: 10px;
+  right: 80px;
+  background-color: var(--black);
+  transition: left .5s, right .4s .2s;
+}
+
+.light #sun {
+  fill: var(--btn-detail);
+  transition: fill .5s .2s;
+}
+
+.light #moon {
+  fill: #fff;
+  transition: fill .5s;
+}

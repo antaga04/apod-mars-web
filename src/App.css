@@ -1,0 +1,49 @@
+main {
+  min-height: 65.5vh;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  opacity: .85;
+}
+
+.cursor div {
+  position: fixed;
+  z-index: -1;
+  width: 50rem;
+  height: 50rem;
+
+  translate: none;
+  rotate: none;
+  scale: none;
+  transform: translate(-50%, -50%) scale(0.3, 0.3);
+  left: 734px;
+  top: 430px;
+}
+
+.colorOne {
+  animation: 10s colorOne linear infinite;
+  background: linear-gradient(90deg, #0067c7 1.98%, #0046c7 1.99%, #0c4c90 100%);
+  /* background: radial-gradient(131.66% 120.77% at 50% 97.75%,var(--blueCharcoal) 47.41%,#63e 69.27%,#fff 100%)!important; */
+  opacity: .8;
+  filter: blur(127px);
+  border-radius: 50%;
+}
+
+.colorTwo {
+  animation: colorTwo 6s linear infinite;
+  /* background: linear-gradient(90deg, #3c63ff 1.98%, #3c60ff 1.99%, #0c4e90 100%); */
+  background: linear-gradient(90deg, #3cffbe 1.98%, #3cffd8 1.99%, #0c9089 100%);
+  /* background: radial-gradient(131.66% 120.77% at 50% 97.75%,var(--blueCharcoal) 47.41%,#63e 69.27%,#fff 100%)!important; */
+  opacity: .8;
+  filter: blur(127px);
+  border-radius: 50%;
+}

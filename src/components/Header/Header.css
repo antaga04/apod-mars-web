@@ -1,0 +1,56 @@
+header {
+  position: sticky;
+  top: 0;
+  padding: 2.5em 7%;
+}
+
+.menu__wrapper {
+  justify-content: space-between;
+}
+
+.basis25 {
+  flex-basis: 25%;
+}
+
+.menu-nav {
+  display: table;
+  width: 100%;
+}
+
+.menu-bar {
+  padding: 1em 2em;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.menu-bar>li {
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 9em;
+  white-space: nowrap;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  transition: color .3s ease-in-out;
+  padding: .5em 1em;
+}
+
+nav a:hover {
+  color: var(--detail);
+}
+
+nav a.active {
+  color: var(--detail);
+  border-radius: 3em;
+}
+
+/* THEME BUTTON */
+.theme-toggle {
+  justify-content: end;
+}
+
+.theme-btn {
+  padding: .5em;
+}

@@ -1,0 +1,193 @@
+:root {
+  --black: #1E1E1E;
+  --grey: #CCCCCC;
+  --white: rgba(255, 255, 255, 0.5);
+
+  --detail: #F26B47;
+  --btn-detail: #ffca39;
+
+  --color: #951313;
+  --color2: #f7f4fa;
+  --color3: #f5ede9;
+
+  --blueCharcoal: #010314;
+
+  --noise: url('/img-noise-361x370.png');
+  --font-regular: 'Orbitron', sans-serif;
+}
+
+.light {
+  --background: #eaedf1;
+  --color4: #0e0f10;
+}
+
+.dark {
+  --background: #0e0f10;
+  --color4: #fff;
+}
+
+body.light:before {
+  filter: invert(1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  color: var(--color4);
+  background-color: var(--background);
+  font-family: var(--font-regular);
+}
+
+body:before {
+  content: "";
+  background-image: url(./grid-9e733cdb.svg);
+  background-size: 100%;
+  position: fixed;
+  top: 0;
+  left: 7%;
+  right: 7%;
+  bottom: 0;
+  transform: scaleY(100%);
+  transform-origin: 0 0;
+  z-index: -1;
+}
+
+@media (max-width: 500px) {
+  body:before {
+    background-size: 300%;
+    left: -1%;
+    right: -1%;
+  }
+}
+
+body:after {
+  content: "";
+  position: fixed;
+  z-index: 9999;
+  top: -300%;
+  left: -150%;
+  height: 700%;
+  width: 700%;
+  -webkit-animation: grain 7s steps(10) infinite;
+  animation: grain 7s steps(10) infinite;
+  background-image: url(/noisy.png);
+  background-size: 200px;
+  background-repeat: repeat;
+  opacity: .25;
+  pointer-events: none;
+}
+
+@keyframes grain {
+
+  0%,
+  to {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-5%, -5%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, -5%);
+  }
+
+  70% {
+    transform: translate(5%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 35%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+@-webkit-keyframes grain {
+
+  0%,
+  to {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-5%, -5%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, -5%);
+  }
+
+  70% {
+    transform: translate(5%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 35%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
