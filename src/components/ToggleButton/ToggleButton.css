@@ -11,16 +11,17 @@
 }
 
 .theme-btn div {
-  padding: 1em;
+  padding: .7em 1em;
   border-radius: 2em;
   display: flex;
   align-items: center;
-  gap: 3.5em;
+  gap: 2.5em;
   position: relative;
   transition: .25s -.1s;
 }
 
 .switch {
+  min-width: 45px;
   z-index: 1;
   position: absolute;
   top: 20%;
@@ -47,14 +48,14 @@
 }
 
 .dark .switch {
-  left: 80px;
+  left: 63px;
   right: 10px;
   transition: left .4s .2s, right .5s, background .35s -.1s;
 }
 
 .dark #moon {
   fill: var(--btn-detail);
-  transition: color .5s .2s;
+  transition: fill .5s .2s;
 }
 
 .dark #sun {

@@ -10,10 +10,11 @@ const Header = () => {
     <header>
       <div className="flex-center menu__wrapper">
         <NavLink to="" className="basis25">
-          <img src={logo} className="logo" alt="Logo" style={{ height: '4.6em' }} />
+          <img src={logo} className="logo" alt="Black hole img - Logo" />
         </NavLink>
 
         <nav className="menu-nav">
+          <ul className="mobile-nav flex-center">menu ▾</ul>
           <ul className="flex-center menu-bar">
             <li>
               <NavLink to="">home</NavLink>

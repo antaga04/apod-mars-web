@@ -63,6 +63,7 @@ body {
   color: var(--color4);
   background-color: var(--background);
   font-family: var(--font-regular);
+  transition: background .25s ease-in-out;
 }
 
 body:before {

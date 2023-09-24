@@ -1,7 +1,13 @@
+@media (min-width: 769px) {
+  header {
+    position: sticky;
+    top: 0;
+    padding: 2.5em 7%;
+  }
+}
+
 header {
-  position: sticky;
-  top: 0;
-  padding: 2.5em 7%;
+  padding: 2em 4%;
 }
 
 .menu__wrapper {
@@ -18,8 +24,9 @@ header {
 }
 
 .menu-bar {
-  padding: 1em 2em;
-  border-radius: 12px;
+  width: fit-content;
+  margin: auto;
+  /* padding: 1em 2em; */
   justify-content: center;
 }
 
@@ -33,7 +40,7 @@ header {
 
 nav a {
   display: block;
-  transition: color .3s ease-in-out;
+  transition: color .25s ease-in-out;
   padding: .5em 1em;
 }
 
@@ -53,4 +60,32 @@ nav a.active {
 
 .theme-btn {
   padding: .5em;
+}
+
+.logo {
+  height: 4.6em;
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 3.9em;
+  }
+
+  .mobile-nav {
+    padding: .5em 0;
+    border-bottom: 1px solid;
+    width: fit-content;
+    margin: auto;
+    font-weight: 900;
+  }
+
+  .menu-bar {
+    display: none !important;
+  }
 }
