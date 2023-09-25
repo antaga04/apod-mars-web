@@ -2,4 +2,9 @@ footer {
   padding: 1.5em;
   justify-content: center;
   flex-direction: column;
+  color: var(--color4);
+}
+
+.icons {
+  fill: var(--color4);
 }

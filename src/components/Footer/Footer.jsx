@@ -13,7 +13,7 @@ const Footer = () => {
               xmlns="http://www.w3.org/2000/svg"
               xmlns:svg="http://www.w3.org/2000/svg"
             >
-              <g className="layer">
+              <g className="icons">
                 <title>LinkedIn</title>
                 <circle cx="4.98" cy="5.01" id="svg_1" r="2.19" />
                 <path
@@ -32,7 +32,7 @@ const Footer = () => {
               xmlns="http://www.w3.org/2000/svg"
               xmlns:svg="http://www.w3.org/2000/svg"
             >
-              <g className="layer">
+              <g className="icons">
                 <title>GitHub</title>
                 <path
                   clipRule="evenodd"
@@ -52,7 +52,7 @@ const Footer = () => {
               xmlns="http://www.w3.org/2000/svg"
               xmlns:svg="http://www.w3.org/2000/svg"
             >
-              <g className="layer">
+              <g className="icons">
                 <title>Gmail</title>
                 <path
                   d="m18.73,5.41l-1.28,1l-5.45,4.05l-5.45,-4.09l-1.28,-1a2,2 0 0 0 -3.27,1.68l0,11.59a1.36,1.36 0 0 0 1.36,1.36l3.19,0l0,-7.72l5.45,4.09l5.45,-4.09l0,7.72l3.19,0a1.36,1.36 0 0 0 1.36,-1.36l0,-11.59a2,2 0 0 0 -3.27,-1.64z"

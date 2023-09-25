@@ -1,0 +1,31 @@
+.card-container img {
+  width: auto;
+  height: 12em;
+}
+
+.card-container {
+  padding: 1em;
+  border: 1px solid var(--color4);
+  border-radius: .75em;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.card-container h2 {
+  min-height: 2.6em;
+  /* margin: 0 auto; */
+}
+
+/* .card-img-container {
+  justify-content: center;
+  width: 100%;
+} */
+
+@media (max-width: 768px) {
+  .card-container img {
+    height: 8em;
+  }
+}
