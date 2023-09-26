@@ -1,42 +1,18 @@
 import React from 'react';
 import './ToggleButton.css';
+import { useTheme } from '../../utils/ThemeContext';
+import { MoonIcon, SunIcon } from '../Icons/Icons.jsx';
 
 const ToggleButton = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <>
-      <button className="theme-btn">
+      <button className={`${theme} theme-btn`} onClick={toggleTheme}>
         <div>
           <span className="switch"></span>
-          <svg
-            id="sun"
-            width="24"
-            height="24"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:svg="http://www.w3.org/2000/svg"
-          >
-            <g className="layer">
-              <title>Theme</title>
-              <path
-                d="m6.99,12c0,2.76 2.25,5.01 5.01,5.01s5.01,-2.25 5.01,-5.01s-2.25,-5.01 -5.01,-5.01s-5.01,2.25 -5.01,5.01zm5.01,-3.01c1.66,0 3.01,1.35 3.01,3.01s-1.35,3.01 -3.01,3.01s-3.01,-1.35 -3.01,-3.01s1.35,-3.01 3.01,-3.01zm-1,10.01l2,0l0,3l-2,0l0,-3zm0,-17l2,0l0,3l-2,0l0,-3zm-9,9l3,0l0,2l-3,0l0,-2zm17,0l3,0l0,2l-3,0l0,-2zm-14.78,7.36l2.12,-2.12l1.41,1.42l-2.12,2.12l-1.41,-1.42zm12.02,-12.02l2.12,-2.12l1.42,1.42l-2.13,2.12l-1.41,-1.42zm-9.9,1.42l-2.12,-2.12l1.41,-1.42l2.12,2.13l-1.41,1.41zm13.44,10.6l-1.42,1.42l-2.12,-2.12l1.41,-1.42l2.13,2.12z"
-                id="sun-icon"
-              />
-            </g>
-          </svg>
-          <svg
-            id="moon"
-            width="24"
-            height="24"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:svg="http://www.w3.org/2000/svg"
-          >
-            <g className="layer">
-              <title>Theme</title>
-              <path
-                d="m20.74,13.05a8.09,8.09 0 0 1 -2.07,0.27c-2.14,0 -4.14,-0.83 -5.65,-2.34a8.02,8.02 0 0 1 -2.06,-7.72a1,1 0 0 0 -1.23,-1.23a10.01,10.01 0 0 0 -4.49,2.59c-3.9,3.89 -3.9,10.24 0,14.14a9.94,9.94 0 0 0 7.07,2.93a9.93,9.93 0 0 0 7.07,-2.93a10.01,10.01 0 0 0 2.59,-4.49a1,1 0 0 0 -1.23,-1.23l0,0.01zm-2.77,4.3a7.95,7.95 0 0 1 -5.66,2.34a7.95,7.95 0 0 1 -5.65,-2.34c-3.12,-3.12 -3.12,-8.2 0,-11.32a7.92,7.92 0 0 1 2.06,-1.48a10.03,10.03 0 0 0 2.89,7.85a9.97,9.97 0 0 0 7.84,2.89a8.04,8.04 0 0 1 -1.48,2.06z"
-                id="moon-icon"
-              />
-            </g>
-          </svg>
+          {MoonIcon()}
+          {SunIcon()}
         </div>
       </button>
     </>

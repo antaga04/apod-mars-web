@@ -1,7 +1,146 @@
 main {
   min-height: 65.5vh;
 }
+/* APP */
+#app {
+  color: var(--color4);
+  background-color: var(--background);
+  font-family: var(--font-regular);
+  transition: background .25s ease-in-out;
+  min-height: inherit;
+}
 
+#app.light::before {
+  filter: invert(1);
+}
+
+#app::before {
+  content: "";
+  background-image: url(./grid-9e733cdb.svg);
+  background-size: 100%;
+  position: fixed;
+  top: 0;
+  left: 7%;
+  right: 7%;
+  bottom: 0;
+  transform: scaleY(100%);
+  transform-origin: 0 0;
+}
+
+@media (max-width: 500px) {
+  #app:before {
+    background-size: 300%;
+    left: -1%;
+    right: -1%;
+  }
+}
+
+#app:after {
+  content: "";
+  position: fixed;
+  z-index: 9999;
+  top: -300%;
+  left: -150%;
+  height: 700%;
+  width: 700%;
+  -webkit-animation: grain 7s steps(10) infinite;
+  animation: grain 7s steps(10) infinite;
+  background-image: url(/noisy.png);
+  background-size: 200px;
+  background-repeat: repeat;
+  opacity: .25;
+  pointer-events: none;
+}
+
+@keyframes grain {
+
+  0%,
+  to {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-5%, -5%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, -5%);
+  }
+
+  70% {
+    transform: translate(5%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 35%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+@-webkit-keyframes grain {
+
+  0%,
+  to {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-5%, -5%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, -5%);
+  }
+
+  70% {
+    transform: translate(5%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 35%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+/* CURSOR */
 .cursor {
   pointer-events: none;
   position: fixed;
