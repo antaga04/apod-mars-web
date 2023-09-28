@@ -18,7 +18,7 @@
 
 #app::before {
   content: "";
-  background-image: url(./grid-9e733cdb.svg);
+  background-image: url(/grid-9e733cdb.svg);
   background-size: 100%;
   position: fixed;
   top: 0;
