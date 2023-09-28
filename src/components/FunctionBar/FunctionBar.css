@@ -11,3 +11,13 @@
   font-weight: 700;
   color: var(--black);
 }
+
+input[type=date] {
+  font-family: var(--font-regular);
+  background-color: var(--background);
+  padding: .3rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  color: var(--detail);
+  fill: var(--detail);
+}

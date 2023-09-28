@@ -8,10 +8,6 @@
   padding: .75rem;
 }
 
-input[type=date] {
-  font-family: auto;
-}
-
 .picture {
   width: 100%;
   min-height: 100%;
