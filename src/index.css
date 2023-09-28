@@ -48,12 +48,6 @@ body {
   min-height: 100vh;
 }
 
-#root {
-  max-width: 1400px;
-  margin: auto;
-  min-height: inherit;
-}
-
 .hidden {
   display: none !important;
 }
@@ -61,4 +55,8 @@ body {
 .flex-center {
   display: flex;
   align-items: center;
+}
+
+#root {
+  min-height: inherit;
 }

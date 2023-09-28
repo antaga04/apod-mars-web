@@ -1,9 +1,10 @@
 import React from 'react';
+import './FunctionBar.css'
 
 const FunctionBar = ({ name, date, today, setDate }) => {
   return (
-    <div className="flex-center">
-      <label>{name}</label>
+    <div className="flex-center function-bar">
+      <label>{name.toUpperCase()}</label>
       <input
         type="date"
         value={date}

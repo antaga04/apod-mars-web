@@ -11,13 +11,15 @@ function App() {
 
   return (
     <div id="app" className={theme}>
-      <div className="cursor hidden">
-        <div className="colorOne"></div>
-        <div className="colorTwo"></div>
-      </div>
-      <Header />
-      <Outlet />
-      <Footer />
+      <section className='app-section'>
+        <div className="cursor hidden">
+          <div className="colorOne"></div>
+          <div className="colorTwo"></div>
+        </div>
+        <Header />
+        <Outlet />
+        <Footer />
+      </section>
     </div>
   );
 }
