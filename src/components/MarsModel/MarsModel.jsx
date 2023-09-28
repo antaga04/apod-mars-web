@@ -10,7 +10,7 @@ const MarsModel = ({ data, name, load }) => {
         <figure className="card-container">
           <picture>
             <img
-              src={data.photos.length ? data.photos[0].img_src : null}
+              src={data.photos ? data.photos[0].img_src : null}
               alt={`${name} picture.`}
               className="picture"
             />
