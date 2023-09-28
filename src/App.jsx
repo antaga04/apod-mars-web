@@ -16,9 +16,7 @@ function App() {
         <div className="colorTwo"></div>
       </div>
       <Header />
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
       <Footer />
     </div>
   );

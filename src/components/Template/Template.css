@@ -1,0 +1,11 @@
+.page__wrapper {
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+  max-width: 750px;
+  min-height: 65.5vh;
+}
+
+input[type=date] {
+  font-family: auto;
+}

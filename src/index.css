@@ -1,9 +1,9 @@
 :root {
-  --black: #1E1E1E;
-  --grey: #CCCCCC;
+  --black: #1e1e1e;
+  --grey: #ccc;
   --white: rgba(255, 255, 255, 0.5);
 
-  --detail: #F26B47;
+  --detail: #f26b47;
   --btn-detail: #ffca39;
 
   --color: #951313;
@@ -11,6 +11,7 @@
   --color3: #f5ede9;
 
   --blueCharcoal: #010314;
+  --oposite: #000;
 
   --noise: url('/img-noise-361x370.png');
   --font-regular: 'Orbitron', sans-serif;
@@ -19,11 +20,13 @@
 .light {
   --background: #eaedf1;
   --color4: #0e0f10;
+  --oposite: #1e1e1e;
 }
 
 .dark {
   --background: #0e0f10;
   --color4: #fff;
+  --oposite: #f3f3f3;
 }
 
 * {

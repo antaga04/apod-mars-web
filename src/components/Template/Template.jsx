@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FunctionBar from '../FunctionBar/FunctionBar';
+import './Template.css';
 
 const Template = ({ name }) => {
+  // formato ISO -> 2023-01-01
+  const today = new Date(Date.now()).toISOString().slice(0, 10);
+  const [date, setDate] = useState(today);
+  const [data, setData] = useState([]);
+
   return (
-    <div id={name}>
-      <FunctionBar name={name}/>
+    <main id={name} className="page__wrapper flex-center">
+      <FunctionBar name={name} today={today} date={date} setDate={setDate} />
       <img src="" alt="Img" />
       <h1>{name}</h1>
       <p>
@@ -13,7 +19,7 @@ const Template = ({ name }) => {
         delectus facilis recusandae?
       </p>
       <p>Copyright</p>
-    </div>
+    </main>
   );
 };
 

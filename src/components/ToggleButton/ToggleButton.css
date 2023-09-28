@@ -8,6 +8,7 @@
 
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .theme-btn div {
@@ -22,7 +23,7 @@
 
 .switch {
   min-width: 45px;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   top: 20%;
   bottom: 20%;
@@ -32,7 +33,7 @@
 
 #moon,
 #sun {
-  z-index: 2;
+  z-index: 3;
 }
 
 #moon {
@@ -48,33 +49,33 @@
 }
 
 .theme-btn.dark .switch {
-  left: 63px;
+  left: 64px;
   right: 10px;
-  transition: left .4s .2s, right .5s, background .35s -.1s;
+  transition: left .4s .2s, right .35s, background .35s -.1s;
 }
 
 .theme-btn.dark #moon {
   fill: var(--btn-detail);
-  transition: fill .5s .2s;
+  transition: fill .35s .2s;
 }
 
 .theme-btn.dark #sun {
-  transition: fill .5s;
+  transition: fill .35s;
 }
 
 .theme-btn.light .switch {
   left: 10px;
   right: 80px;
   background-color: var(--black);
-  transition: left .5s, right .4s .2s;
+  transition: left .35s, right .4s .2s;
 }
 
 .theme-btn.light #sun {
   fill: var(--btn-detail);
-  transition: fill .5s .2s;
+  transition: fill .35s .2s;
 }
 
 .theme-btn.light #moon {
   fill: #fff;
-  transition: fill .5s;
+  transition: fill .35s;
 }

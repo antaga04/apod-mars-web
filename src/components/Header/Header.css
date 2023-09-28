@@ -1,13 +1,13 @@
 @media (min-width: 769px) {
   header {
-    padding: 2.5em 7%;
+    padding: 2.5rem 7%;
   }
 }
 
 header {
   position: sticky;
   top: 0;
-  padding: 1em 4%;
+  padding: 1rem 4%;
   z-index: 9;
 }
 
@@ -38,8 +38,9 @@ header {
 }
 
 .menu-nav {
-  display: table;
+  display: flex;
   width: 100%;
+  position: relative;
 }
 
 .menu-bar {
@@ -52,7 +53,7 @@ header {
 .menu-bar>li {
   text-transform: uppercase;
   font-weight: 900;
-  width: 9em;
+  width: 9rem;
   white-space: nowrap;
   text-align: center;
 }
@@ -60,7 +61,8 @@ header {
 nav a {
   display: block;
   transition: color .25s ease-in-out;
-  padding: .5em 1em;
+  padding: .5rem 1rem;
+  border-radius: 3rem;
 }
 
 nav a:hover {
@@ -69,7 +71,6 @@ nav a:hover {
 
 nav a.active {
   color: var(--detail);
-  border-radius: 3em;
 }
 
 /* THEME BUTTON */
@@ -78,11 +79,11 @@ nav a.active {
 }
 
 .theme-btn {
-  padding: .5em;
+  padding: .5rem;
 }
 
 .logo {
-  height: 4.6em;
+  height: 4.6rem;
 }
 
 @media (min-width: 769px) {
@@ -93,18 +94,66 @@ nav a.active {
 
 @media (max-width: 768px) {
   .logo {
-    height: 3.9em;
+    height: 3.9rem;
+  }
+
+  .menu-nav {
+    color: #000;
+    border-radius: 2rem;
+    padding: 0.1rem 0;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+
+  .bars-container {
+    padding: 0 1rem;
+    z-index: 100;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .bar {
+    background-color: var(--oposite);
+    width: 2em;
+    height: 0.15em;
+    margin: 0.3em 0;
+    transition: all .4s ease-in-out;
+    border-radius: 2rem;
+    transition: all .2s cubic-bezier(.1,.82,.76,.965);
   }
 
   .mobile-nav {
-    padding: .5em 0;
-    border-bottom: 1px solid;
-    width: fit-content;
+    padding: .5rem 0;
+    justify-content: center;
     margin: auto;
     font-weight: 900;
   }
 
   .menu-bar {
-    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--btn-detail);
+    width: 80%;
+    padding: 2rem 0;
+    border-radius: 1.25rem;
+    transition: visibility .35s ease-in-out, opacity .25s ease-in-out;
+  }
+
+  .menu-bar.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .bars-container.active .bar:nth-child(1) {
+    transform: translateY(150%) rotate(45deg);
+  }
+
+  .bars-container.active .bar:nth-child(2) {
+    transform: translateY(-150%) rotate(-45deg);
   }
 }
