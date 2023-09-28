@@ -13,7 +13,8 @@ header {
 
 /* @media (max-width: 500px) { */
   header {
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
   }
 
   header:after {

@@ -13,11 +13,17 @@ input[type=date] {
 }
 
 .picture {
-  width: 20rem;
-  min-height: 20rem;
-  height: fit-content;
+  width: 100%;
+  min-height: 100%;
   object-fit: cover;
 }
+
+/* @media (max-width: 768px) {
+  .picture {
+    width: 100%;
+    min-height: 100%;
+  }
+} */
 
 .content {
   min-height: 30rem;
