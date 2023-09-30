@@ -21,3 +21,13 @@ input[type=date] {
   color: var(--detail);
   fill: var(--detail);
 }
+
+/* input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {
+  color: var(--detail);
+  fill: var(--detail);
+} */
+
+input[type="image" i] {
+  color: var(--detail);
+  fill: var(--detail);
+}
