@@ -10,7 +10,7 @@ const ApodModel = ({ data, name }) => {
       <h1>{data.title}</h1>
       <p>Picture from {data.date ? data.date : 'yyyy-mm-dd'} </p>
       <p>{data.explanation ? data.explanation : 'No explanation'}</p>
-      <p>Copyright: {data.copyright ? data.copyright : 'Annonymous'}</p>
+      <p>Credit & Copyright: {data.copyright ? data.copyright : 'Annonymous'}</p>
     </>
   );
 };

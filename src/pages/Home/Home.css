@@ -1,9 +1,6 @@
 .home-page {
   flex-direction: column;
   padding: 1em 3em;
-}
-
-.introduction {
   margin: auto;
   max-width: 750px;
 }
@@ -21,4 +18,18 @@
   .cards {
     flex-direction: column;
   }
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.introduction h1 {
+  font-size: 1.75rem;
+}
+
+.introduction h2 {
+  font-size: 1.25rem;
 }

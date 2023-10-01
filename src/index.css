@@ -5,13 +5,13 @@
 
   --detail: #f26b47;
   --btn-detail: #ffca39;
+  --blue: #3DA4C2;
 
   --color: #951313;
   --color2: #f7f4fa;
   --color3: #f5ede9;
 
   --blueCharcoal: #010314;
-  --oposite: #000;
 
   --noise: url('/img-noise-361x370.png');
   --font-regular: 'Orbitron', sans-serif;
@@ -26,7 +26,7 @@
 .dark {
   --background: #0e0f10;
   --color4: #fff;
-  --oposite: #f3f3f3;
+  --oposite: #efefef;
 }
 
 * {

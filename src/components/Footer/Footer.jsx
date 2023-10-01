@@ -22,7 +22,7 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <p>be consistent, get better</p>
+      <p>Designed & built by <a href="https://www.linkedin.com/in/adrian-anta-gil/" style={{color: 'var(--blue)'}}>Anta</a></p>
     </footer>
   );
 };

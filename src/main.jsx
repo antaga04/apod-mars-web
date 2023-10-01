@@ -8,6 +8,7 @@ import Apod from './pages/Apod/Apod.jsx';
 import Mars from './pages/Mars/Mars.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
 import { ThemeProvider } from './utils/ThemeContext.jsx';
+import About from './pages/About/About.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route index="/home" element={<Home />} />
             <Route path="/apod" element={<Apod />} />
             <Route path="/mrp" element={<Mars />} />
+            <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

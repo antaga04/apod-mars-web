@@ -43,6 +43,7 @@ header:after {
   display: flex;
   width: 100%;
   position: relative;
+  gap: .5rem;
 }
 
 .menu-bar {
@@ -56,7 +57,7 @@ header:after {
   text-transform: uppercase;
   font-weight: 900;
   font-size: large;
-  width: 9rem;
+  width: 7rem;
   white-space: nowrap;
   text-align: center;
 }
@@ -112,11 +113,20 @@ nav a.active {
     justify-content: flex-end;
     align-items: center;
     position: relative;
+    gap: 0;
+    --popper-transform-origin: top right;
+  }
+
+  .menu-bar {
+    transform-origin: var(--popper-transform-origin);
+    transform: scale(0.8) translateZ(0px);
   }
 
   .menu-bar.active {
+    transform-origin: var(--popper-transform-origin);
     visibility: visible;
     opacity: 1;
+    transform: none;
   }
 
   .menu-bar {
@@ -125,12 +135,12 @@ nav a.active {
     flex-direction: column;
     position: absolute;
     right: 0;
-    top: 100%;
-    background: var(--btn-detail);
-    width: 80%;
-    padding: 2rem 0;
-    border-radius: 1.25rem;
-    transition: visibility .35s ease-in-out, opacity .25s ease-in-out;
+    top: 85%;
+    background: var(--grey);
+    width: 85%;
+    padding: 1.3rem 0;
+    border-radius: .75rem;
+    transition: visibility .4s ease-in-out, opacity .25s ease-in-out, transform .3s ease-in-out;
     transform-style: preserve-3d;
   }
 

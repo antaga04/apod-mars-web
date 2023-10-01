@@ -1,5 +1,5 @@
 #app {
-  color: var(--color4);
+  color: var(--oposite);
   background-color: var(--background);
   font-family: var(--font-regular);
   transition: background .25s ease-in-out;

@@ -23,7 +23,7 @@ const Header = () => {
           <img src={logo} className="logo" alt="Black hole img - Logo" />
         </NavLink>
 
-        <nav className="menu-nav">
+        <nav className={`menu-nav ${isMenuVisible ? 'active' : ''}`}>
           <ul className={`flex-center menu-bar ${isMenuVisible ? 'active' : ''}`}>
             <li>
               <NavLink to="" onClick={closeMenu}>
@@ -38,6 +38,11 @@ const Header = () => {
             <li>
               <NavLink to="mrp" onClick={closeMenu}>
                 mrp
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="about" onClick={closeMenu}>
+                about
               </NavLink>
             </li>
           </ul>

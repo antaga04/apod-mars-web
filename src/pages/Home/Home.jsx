@@ -1,25 +1,33 @@
 import React from 'react';
 import './Home.css';
 import Card from '../../components/Card/Card';
+import { apodText, mrpText } from '../../utils/data';
 
 const Home = () => {
   return (
-    <article className="home-page flex-center">
-      <div className="introduction">
-        <div>
-          <p>Welcome! In this site you can view pictures taken by NASA.</p>
+    <main className="home-page">
+        <section className="introduction">
+          <h1>Welcome to Astronomy Hub!</h1>
+          <h2>The perfect website to view pictures taken by NASA.</h2>
           <p>
             Right now we have avaliable both the Astronomy Picture of the Day (APOD) and the Mars
-            Rovers Photo (MRP). You can select a specific date for the picture of try our new Magic
-            button to get a random one.
+            Rovers Photo (MRP).
           </p>
-        </div>
-        <section className="cards flex-center">
-          <Card name="Astronomy Picture of the Day" img="/asteroid.png" path="apod" />
-          <Card name="Mars Rovers Photo" img="/mars.png" path="mrp" />
+          <p>
+            You can select a specific date for the picture of try our new Magic button to get a
+            random one.
+          </p>
         </section>
-      </div>
-    </article>
+        <section className="cards flex-center">
+          <Card
+            name="Astronomy Picture of the Day"
+            img="/asteroid.png"
+            text={apodText}
+            path="apod"
+          />
+          <Card name="Mars Rovers Photo" img="/mars.png" text={mrpText} path="mrp" />
+        </section>
+    </main>
   );
 };
 

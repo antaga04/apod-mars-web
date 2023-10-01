@@ -1,3 +1,7 @@
+.card {
+  width: 100%;
+}
+
 .card-img-container img {
   width: auto;
   height: 12em;
@@ -17,13 +21,7 @@
 
 .card-container h2 {
   min-height: 2.6em;
-  /* margin: 0 auto; */
 }
-
-/* .card-img-container {
-  justify-content: center;
-  width: 100%;
-} */
 
 @media (max-width: 768px) {
   .card-img-container img {
