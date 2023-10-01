@@ -114,7 +114,28 @@ nav a.active {
     position: relative;
   }
 
-  .bars-container {
+  .menu-bar.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu-bar {
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--btn-detail);
+    width: 80%;
+    padding: 2rem 0;
+    border-radius: 1.25rem;
+    transition: visibility .35s ease-in-out, opacity .25s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+  /* burger */
+  /* .bars-container {
     padding: 0 1rem;
     z-index: 100;
     position: relative;
@@ -131,37 +152,11 @@ nav a.active {
     transition: all .2s cubic-bezier(.1, .82, .76, .965);
   }
 
-  .mobile-nav {
-    padding: .5rem 0;
-    justify-content: center;
-    margin: auto;
-    font-weight: 900;
-  }
-
-  .menu-bar {
-    visibility: hidden;
-    opacity: 0;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background: var(--btn-detail);
-    width: 80%;
-    padding: 2rem 0;
-    border-radius: 1.25rem;
-    transition: visibility .35s ease-in-out, opacity .25s ease-in-out;
-  }
-
-  .menu-bar.active {
-    visibility: visible;
-    opacity: 1;
-  }
-
   .bars-container.active .bar:nth-child(1) {
     transform: translateY(150%) rotate(45deg);
   }
 
   .bars-container.active .bar:nth-child(2) {
     transform: translateY(-150%) rotate(-45deg);
-  }
+  } */
 }

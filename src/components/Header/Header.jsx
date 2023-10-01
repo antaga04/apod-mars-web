@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
+import './BurgerMenu.css';
 import { NavLink } from 'react-router-dom';
 import logo from '/nasa-retro-logo.png';
 import ToggleButton from '../ToggleButton/ToggleButton';
@@ -48,6 +49,11 @@ const Header = () => {
           <div className={`bars-container ${isMenuVisible ? 'active' : ''}`} onClick={toggleMenu}>
             <div className="bar"></div>
             <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+
+          <div className={`menu burger ${isMenuVisible ? 'active' : ''}`} onClick={toggleMenu}>
+            <span></span>
           </div>
         </nav>
       </div>
