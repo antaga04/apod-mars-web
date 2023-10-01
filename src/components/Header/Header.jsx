@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 import { NavLink } from 'react-router-dom';
-import logo from '/black-hole.png';
+import logo from '/nasa-retro-logo.png';
 import ToggleButton from '../ToggleButton/ToggleButton';
 
 const Header = () => {
