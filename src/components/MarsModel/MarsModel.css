@@ -1,0 +1,18 @@
+.mars-container {
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: .6rem;
+}
+
+/* .mars-container picture {
+  padding: .25rem 0;
+} */
+
+.mars-container img {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border: 0.12rem solid var(--detail);
+}

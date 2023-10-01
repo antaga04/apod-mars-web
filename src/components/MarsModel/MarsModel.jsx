@@ -1,23 +1,17 @@
 import React from 'react';
-import Loading from '../Loading/Loading';
+import './MarsModel.css';
 
-const MarsModel = ({ data, name, load }) => {
+const MarsModel = ({ data, name }) => {
   return (
-    <>
-      {load === true ? (
-        <Loading />
-      ) : (
-        <figure className="card-container">
-          <picture>
-            <img
-              src={data.photos ? data.photos[0].img_src : null}
-              alt={`${name} picture.`}
-              className="picture"
-            />
+    <div className="flex-center mars-container">
+      {data.photos.map((item) => {
+        return (
+          <picture key={item.id}>
+            <img src={item.img_src} alt={`${name} picture.`} className="picture" />
           </picture>
-        </figure>
-      )}
-    </>
+        );
+      })}
+    </div>
   );
 };
 

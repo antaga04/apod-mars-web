@@ -5,9 +5,9 @@ import { NASA_URL, otherDay } from '../../utils/data';
 import MarsModel from '../../components/MarsModel/MarsModel';
 
 const Mars = () => {
-  const MARS_URL = `${NASA_URL}mars-photos/api/v1/rovers/curiosity/photos?`;
+  const MARS_URL = `${NASA_URL}mars-photos/api/v1/rovers/`;
 
-  return <Template name="MRP" endpoint={MARS_URL} Model={MarsModel} day={otherDay}/>;
+  return <Template name="mrp" endpoint={MARS_URL} Model={MarsModel} day={otherDay}/>;
 };
 
 export default Mars;

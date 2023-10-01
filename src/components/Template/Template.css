@@ -23,10 +23,14 @@
 
 .content {
   min-height: 30rem;
+  width: 100%;
 }
 
 .content figure {
   animation: faceIn 2s linear;
+  position: relative;
+  width: 100%;
+  min-height: inherit;
 }
 
 @keyframes faceIn {

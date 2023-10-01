@@ -1,10 +1,21 @@
 .function-bar {
-  background-color: var(--btn-detail);
-  width: 100%;
-  justify-content: space-evenly;
-  padding: .65rem;
   border-radius: 2rem;
+  justify-content: space-between;
   overflow: hidden;
+  width: 100%;
+  font-size: large;
+}
+
+.apod.function-bar {
+  position: absolute;
+  left: 2.5%;
+  top: 2rem;
+  width: 95%;
+}
+
+.mrp.function-bar {
+  background-color: var(--btn-detail);
+  padding: .65rem;
 }
 
 .function-bar label {
@@ -14,12 +25,21 @@
 
 input[type=date] {
   font-family: var(--font-regular);
+}
+
+.pill {
   background-color: var(--background);
   padding: .3rem 1rem;
   border-radius: 2rem;
   border: none;
   color: var(--detail);
   fill: var(--detail);
+  font-size: 1rem;
+
+}
+
+.shuffle-btn {
+  gap: .5rem;
 }
 
 /* .dark input[type="date"]::-webkit-calendar-picker-indicator {
