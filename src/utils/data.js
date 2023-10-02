@@ -15,7 +15,7 @@ export const roverData = [
   {
     rover: 'curiosity',
     min_date: toISOFormat(new Date('2012-08-06')),
-    max_date: otherDay,
+    max_date: today,
     min_sol: 0,
   },
   {
