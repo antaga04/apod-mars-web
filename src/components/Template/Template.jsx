@@ -17,6 +17,7 @@ const Template = ({ name, endpoint, Model, day }) => {
   const url = endpoint + (name === 'apod' ? apodUrl : mrpUrl);
 
   const fetchData = async () => {
+    console.log('API REQUEST');
     try {
       const response = await fetch(url);
       if (!response.ok) {

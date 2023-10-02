@@ -1,9 +1,7 @@
 import React from 'react';
-import Loading from '../Loading/Loading';
 
 const ApodModel = ({ data, name }) => {
   const imgUrl = data && data.url;
-  console.log('\nIMAGEN: ', imgUrl);
   return (
     <>
       <picture>
