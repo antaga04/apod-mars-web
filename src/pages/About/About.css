@@ -1,0 +1,17 @@
+.about {
+  width: 100%;
+}
+
+.about p {
+  font-size: larger;
+  font-weight: 600;
+}
+
+.decoration {
+  list-style: lower-roman;
+  padding-left: 4%;
+}
+
+.decoration li {
+  margin-bottom: .5rem;
+}

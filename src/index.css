@@ -44,6 +44,10 @@ ul {
   list-style: none;
 }
 
+u {
+  text-decoration-color: var(--detail);
+}
+
 body {
   min-height: 100vh;
 }
@@ -59,4 +63,14 @@ body {
 
 #root {
   min-height: inherit;
+}
+
+.social-link {
+  font-weight: 700;
+  color: var(--blue);
+  transition: color .25s ease-in-out;
+}
+
+.social-link:hover {
+  color: #5066ae;
 }

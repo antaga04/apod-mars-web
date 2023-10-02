@@ -22,7 +22,12 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <p>Designed & built by <a href="https://www.linkedin.com/in/adrian-anta-gil/" style={{color: 'var(--blue)'}}>Anta</a></p>
+      <p>
+        Designed & built by{' '}
+        <a href="https://www.linkedin.com/in/adrian-anta-gil/" className="social-link">
+          Anta
+        </a>
+      </p>
     </footer>
   );
 };

@@ -1,3 +1,7 @@
+main {
+  min-height: 75.6vh;
+}
+
 #app {
   color: var(--oposite);
   background-color: var(--background);
