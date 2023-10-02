@@ -2,23 +2,31 @@
   flex-direction: column;
   padding: 1em 3em;
   margin: auto;
-  max-width: 750px;
+  max-width: 875px;
 }
 
 .cards {
-  margin-top: 8%;
-  justify-content: space-between;
+  margin-top: 5%;
   gap: 2em;
 }
 
 
 @media (min-width: 769px) {
   .introduction h1 {
-    font-size: 2.5rem;
+    font-size: 2.85rem;
   }
 
   .introduction h2 {
-    font-size: 1.85rem;
+    font-size: 2.25rem;
+  }
+
+  .introduction p {
+    font-size: larger;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -28,15 +36,14 @@
   }
 
   .cards {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .introduction h1 {
-    font-size: 1.75rem;
-  }
-
-  .introduction h2 {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 }
 

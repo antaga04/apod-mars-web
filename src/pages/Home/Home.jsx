@@ -20,7 +20,7 @@ const Home = () => {
           one.
         </p>
       </section>
-      <section className="cards flex-center">
+      <section className="cards">
         <Card name="Astronomy Picture of the Day" img="/asteroid.png" text={apodText} path="apod" />
         <Card name="Mars Rovers Photo" img="/mars.png" text={mrpText} path="mrp" />
       </section>
