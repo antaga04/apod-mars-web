@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './FunctionBar.css';
 import { Shuffle } from '../Icons/Icons';
 import { roverData } from '../../utils/data';
+import { randomDate } from '../../utils/functions';
 
 const FunctionBar = ({ name, date, setDate, setRover, rover, minDate, maxDate }) => {
   useEffect(() => {
@@ -43,7 +44,12 @@ const FunctionBar = ({ name, date, setDate, setRover, rover, minDate, maxDate })
         </select>
       )}
 
-      <button className="pill flex-center shuffle-btn">
+      <button
+        className="pill flex-center shuffle-btn"
+        onClick={() => {
+          setDate(randomDate(minDate, maxDate));
+        }}
+      >
         <Shuffle />
         <span>Date</span>
       </button>

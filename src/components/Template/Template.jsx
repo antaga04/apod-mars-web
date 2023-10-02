@@ -10,6 +10,7 @@ const Template = ({ name, endpoint, Model, day }) => {
   const [date, setDate] = useState(day);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
 
   const apodUrl = `date=${date}&api_key=${API_KEY}`;
   const mrpUrl = `${rover}/photos?earth_date=${date}&api_key=${API_KEY}`;
@@ -25,21 +26,21 @@ const Template = ({ name, endpoint, Model, day }) => {
       setData(data);
       setLoading(false);
     } catch (error) {
-      setLoading(true);
+      setError(true);
     }
   };
 
   useEffect(() => {
     setLoading(true);
     fetchData();
-    console.log('date: ', date);
-    console.log('rover: ', rover);
   }, [date, rover]);
 
   return (
     <main id={name} className="page__wrapper flex-center">
-      {loading === true ? (
+      {loading ? (
         <Loading />
+      ) : error ? (
+        <div className="error-message">Error: {error.message}</div>
       ) : (
         <section className="content flex-center">
           <figure className="card-container">

@@ -7,7 +7,6 @@ import { useTheme } from './utils/ThemeContext';
 
 function App() {
   const { theme } = useTheme('light');
-  // console.log('carga app');
 
   return (
     <div id="app" className={theme}>
