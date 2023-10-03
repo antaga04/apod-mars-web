@@ -2,7 +2,7 @@ import React from 'react';
 import './MarsModel.css';
 
 const MarsModel = ({ data, name }) => {
-  if ((data.photos.lenght = [])) {
+  if (data.photos.length === 0) {
     return (
       <div className="flex-center mars-container" style={{ flex: '1' }}>
         No data found for this date and rover.
