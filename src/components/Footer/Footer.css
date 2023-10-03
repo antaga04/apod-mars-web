@@ -7,10 +7,18 @@ footer {
 }
 
 .icons {
-  fill: var(--detail);
   justify-content: center;
   width: 100%;
   gap: 2.5rem;
+}
+
+.icons>li>a {
+  fill: var(--detail);
+  transition: fill .3s ease-in-out;
+}
+
+.icons>li>a:hover {
+  fill: var(--color);
 }
 
 @media (max-width: 768px) {

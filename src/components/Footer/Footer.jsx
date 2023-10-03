@@ -24,7 +24,11 @@ const Footer = () => {
       </ul>
       <p>
         Designed & built by{' '}
-        <a href="https://www.linkedin.com/in/adrian-anta-gil/" className="social-link">
+        <a
+          href="https://www.linkedin.com/in/adrian-anta-gil/"
+          target="blank"
+          className="social-link"
+        >
           Anta
         </a>
       </p>
