@@ -3,7 +3,6 @@
   justify-content: space-evenly;
   margin: auto;
   max-width: 975px;
-  min-height: 65.5vh;
   gap: 2rem;
   padding: .75rem;
 }
@@ -13,13 +12,6 @@
   min-height: 100%;
   object-fit: cover;
 }
-
-/* @media (max-width: 768px) {
-  .picture {
-    width: 100%;
-    min-height: 100%;
-  }
-} */
 
 .content {
   min-height: 30rem;
