@@ -23,9 +23,12 @@ const Template = ({ name, endpoint, Model, day }) => {
 
   const apodUrl = `date=${date}&api_key=${API_KEY}`; // evito prop 'endpoint'
   const mrpUrl = `${rover}/photos?earth_date=${date}&api_key=${API_KEY}`; // evito prop 'endpoint'
-  const url = endpoint + (name === 'apod' ? apodUrl : mrpUrl); // no necesario
+  const url = endpoint + (name === 'apod' ? apodUrl : mrpUrl); // no sería necesario
 
-  /* Esta lógica puede servir para las dos. Sacar la lógica a una function*/
+  /* También añadir un map a la información recibida para quedarme sólo con los campos
+  que me interesan. En apod son todos pero en mrp es sólo un campo. */
+
+  /* Esta lógica puede servir para las dos. Sacar la lógica a una function */
   const fetchData = async () => {
     console.log('API REQUEST');
     try {
