@@ -52,10 +52,10 @@ input[type=date] {
 
 @media (max-width: 500px) {
   .apod.function-bar {
-    position: absolute;
-    left: 7%;
-    top: 1.5rem;
-    width: 85%;
+    position: unset;
+    width: 100%;
+    background-color: var(--blue);
+    padding: .4rem;
   }
 
   .mrp.function-bar {
