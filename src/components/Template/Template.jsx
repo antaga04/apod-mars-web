@@ -5,40 +5,37 @@ import { API_KEY, roverData } from '../../utils/data';
 import Loading from '../Loading/Loading';
 
 const Template = ({ name, endpoint, Model, day }) => {
-  /* Evito pasar las props */
-  /* Problema: tener que repetir lo que sea igual en ambos */
-  /* Sobre todo los States. Ya que sería repetir lógica en vez de reutilizarla. */
+  const [rover, setRover] = useState('curiosity');
+  const roverInfo = roverData.find((item) => item.rover === rover);
+  const [date, setDate] = useState(day);
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
 
-  /* La idea sería tener 2 componentes específicos y así ahorrar las comprobaciones 
-  de name y usar lógica innecesaria en el caso de no necesitarla dependiendo del name. 
-  Véase donde poner // 🔴 mars. Y otras cosas más. */
+  const apodUrl = `date=${date}&api_key=${API_KEY}`;
+  const mrpUrl = `${rover}/photos?earth_date=${date}&api_key=${API_KEY}`;
+  const url = endpoint + (name === 'apod' ? apodUrl : mrpUrl);
 
-  const [rover, setRover] = useState('curiosity'); // 🔴 mars
-  const roverInfo = roverData.find((item) => item.rover === rover); // 🔴 mars
-
-  const [date, setDate] = useState(day); // 2️⃣ ambas
-  const [loading, setLoading] = useState(true); // 2️⃣ ambas
-  const [data, setData] = useState([]); // 2️⃣ ambas
-  const [error, setError] = useState(false); // 2️⃣ ambas
-
-  const apodUrl = `date=${date}&api_key=${API_KEY}`; // evito prop 'endpoint'
-  const mrpUrl = `${rover}/photos?earth_date=${date}&api_key=${API_KEY}`; // evito prop 'endpoint'
-  const url = endpoint + (name === 'apod' ? apodUrl : mrpUrl); // no sería necesario
-
-  /* También añadir un map a la información recibida para quedarme sólo con los campos
-  que me interesan. En apod son todos pero en mrp es sólo un campo. */
-
-  /* Esta lógica puede servir para las dos. Sacar la lógica a una function */
   const fetchData = async () => {
-    console.log('API REQUEST');
     try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('There was an error in the request');
+      const cachedData = localStorage.getItem(url);
+
+      if (cachedData) {
+        setData(JSON.parse(cachedData));
+        setLoading(false);
+      } else {
+        console.log('API REQUEST');
+
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('There was an error in the request');
+        }
+        const newData = await response.json();
+        setData(newData);
+        setLoading(false);
+
+        localStorage.setItem(url, JSON.stringify(newData));
       }
-      const data = await response.json();
-      setData(data);
-      setLoading(false);
     } catch (error) {
       setError(true);
     }
@@ -48,10 +45,7 @@ const Template = ({ name, endpoint, Model, day }) => {
     setLoading(true);
     fetchData();
   }, [date, rover]);
-  /* HASTA AQUI */
 
-  /* Esto es lo mismo para ambas */
-  /* Cambiaría el modelo sólamente */
   return (
     <main id={name} className="page__wrapper flex-center">
       {loading ? (
@@ -64,8 +58,8 @@ const Template = ({ name, endpoint, Model, day }) => {
             <FunctionBar
               name={name}
               date={date}
-              minDate={roverInfo.min_date}
-              maxDate={roverInfo.max_date}
+              minDate={name === 'apod' ? '1995-06-16' : roverInfo.min_date}
+              maxDate={name === 'apod' ? day : roverInfo.max_date}
               setDate={setDate}
               setRover={setRover}
               rover={rover}

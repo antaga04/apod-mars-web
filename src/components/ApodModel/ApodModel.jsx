@@ -41,7 +41,7 @@ const ApodModel = ({ data, name }) => {
           />
         </picture>
         <button className="modal-close" onClick={handleCloseModal}>
-          Close
+          X
         </button>
       </dialog>
     </>

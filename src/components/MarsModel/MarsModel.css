@@ -9,7 +9,7 @@
   padding: .25rem 0;
 } */
 
-.mars-container img {
+.mars-container img.picture {
   display: block;
   width: 10rem;
   height: 10rem;
