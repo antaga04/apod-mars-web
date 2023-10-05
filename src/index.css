@@ -79,11 +79,11 @@ body {
 .modal {
   backdrop-filter: blur(10px);
   background: content-box;
-  height: 100%;
+  /* height: 100%; */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  /* width: 100%; */
 }
 
 dialog::backdrop {
@@ -124,8 +124,11 @@ dialog::backdrop {
 }
 
 .modal>picture>img {
+  /* height: 80vh;
+  max-width: 85vw; */
   max-height: 80vh;
-  max-width: 85vw;
+  width: 85vw;
+  object-fit: contain;
 }
 
 #mrp .modal>picture {
@@ -134,4 +137,9 @@ dialog::backdrop {
 
 #apod .modal>picture {
   border: 0.12rem solid var(--blue);
+}
+
+#apod picture {
+  width: 100%;
+  height: auto;
 }
