@@ -79,25 +79,17 @@ body {
 .modal {
   backdrop-filter: blur(10px);
   background: content-box;
-  /* border: 1px solid var(--oposite); */
-  /* height: fit-content; */
+  height: fit-content;
   left: 50%;
-  /* min-height: 75%; */
   top: 50%;
   transform: translate(-50%, -50%);
-  /* width: 100%; */
+  width: fit-content;
 }
 
 dialog::backdrop {
   background-color: #2229;
   backdrop-filter: blur(1px);
 }
-
-/* .modal-image {
-  max-width: 100%;
-  object-fit: contain;
-  height: 100%;
-} */
 
 .modal-close {
   background-color: transparent;
@@ -143,11 +135,3 @@ dialog::backdrop {
 #apod .modal>picture {
   border: 0.12rem solid var(--blue);
 }
-
-/* .modal>picture>img {
-  height: 100%;
-  max-width: 100%;
-  width: unset;
-  object-fit: contain;
-  border: none;
-} */
