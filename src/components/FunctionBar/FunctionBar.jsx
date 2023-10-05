@@ -7,7 +7,7 @@ import { randomDate } from '../../utils/functions';
 const FunctionBar = ({ name, date, setDate, setRover, rover, minDate, maxDate }) => {
   useEffect(() => {
     if (name === 'apod') return;
-    
+
     const selectedRoverInfo = roverData.find((item) => item.rover === rover);
 
     if (selectedRoverInfo && selectedRoverInfo.min_date && selectedRoverInfo.max_date) {
@@ -16,6 +16,16 @@ const FunctionBar = ({ name, date, setDate, setRover, rover, minDate, maxDate })
       }
     }
   }, [rover, date]);
+
+  const handleDateInput = (inputDate) => {
+    const parsedDate = new Date(inputDate);
+
+    if (parsedDate > new Date(maxDate)) {
+      setDate(maxDate);
+    } else {
+      setDate(inputDate);
+    }
+  };
 
   return (
     <div className={`flex-center function-bar ${name}`}>
@@ -26,7 +36,7 @@ const FunctionBar = ({ name, date, setDate, setRover, rover, minDate, maxDate })
         min={minDate}
         max={maxDate}
         onInput={(e) => {
-          setDate(e.target.value.toLocaleString());
+          handleDateInput(e.target.value);
         }}
       />
 
