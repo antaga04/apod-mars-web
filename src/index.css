@@ -79,7 +79,7 @@ body {
 .modal {
   backdrop-filter: blur(10px);
   background: content-box;
-  /* height: 100%; */
+  height: max-content;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
