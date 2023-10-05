@@ -9,6 +9,11 @@ export function toISOFormat(date) {
   return date.toISOString().slice(0, 10);
 }
 
+export function formatDateToDayFirst(inputDate) {
+  const reversedDate = inputDate.split('-').reverse().join('-');
+  return reversedDate;
+}
+
 function isoToDate(isoDate) {
   const parts = isoDate.split('-').map(Number);
   return new Date(parts[0], parts[1] - 1, parts[2]);

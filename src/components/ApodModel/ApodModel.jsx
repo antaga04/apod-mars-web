@@ -18,6 +18,14 @@ const ApodModel = ({ data, name }) => {
     }
   };
 
+  if (data.code === 400) {
+    return (
+      <div className="flex-center mars-container" style={{ flex: '1' }}>
+        No data found for this date.
+      </div>
+    );
+  }
+
   return (
     <>
       <picture>

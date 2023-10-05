@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 import './MarsModel.css';
 
 const MarsModel = ({ data, name }) => {
-  const [openModal, setOpenModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const dialogRef = useRef(null);
