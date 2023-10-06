@@ -1,5 +1,15 @@
-.error-message {
+.message {
   flex: 1;
   font-weight: 700;
-  color: (--oposite);
+  /* color: var(--color); */
+  color: #E84430;
+  background-color: var(--oposite);
+  /* padding: .25rem; */
+  border-radius: .75rem;
+}
+
+.message p {
+  max-width: 75%;
+  text-align: center;
+  margin: auto;
 }
