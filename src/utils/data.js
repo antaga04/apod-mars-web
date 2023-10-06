@@ -32,5 +32,5 @@ export const roverData = [
   },
 ];
 
-export const mrpText = `View the image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars on a specific date.`;
+export const mrpText = `View the image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars on a specific date. A gallery will be display, click on any image to expand it.`;
 export const apodText = `Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.`;
