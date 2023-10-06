@@ -28,7 +28,7 @@ const ApodModel = ({ data, name }) => {
 
   return (
     <>
-      <picture>
+      <picture className='apod-picture'>
         <img
           src={imgUrl === null ? data.hdurl : imgUrl}
           alt={`${name} picture.`}

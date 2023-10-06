@@ -25,6 +25,10 @@
   min-height: inherit;
 }
 
+.apod-picture {
+  min-height: 4rem;
+}
+
 @keyframes faceIn {
   0% {
     opacity: 0;
