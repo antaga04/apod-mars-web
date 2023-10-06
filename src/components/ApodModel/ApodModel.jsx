@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react';
+import { formatDateToDayFirst } from '../../utils/functions';
+import './ApodModel.css';
 
 const ApodModel = ({ data, name }) => {
   const imgUrl = data && data.url;
@@ -28,7 +30,7 @@ const ApodModel = ({ data, name }) => {
 
   return (
     <>
-      <picture className='apod-picture'>
+      <picture className="apod-picture">
         <img
           src={imgUrl === null ? data.hdurl : imgUrl}
           alt={`${name} picture.`}
@@ -36,10 +38,14 @@ const ApodModel = ({ data, name }) => {
           onClick={handleOpenModal}
         />
       </picture>
-      <h1>{data.title}</h1>
-      <p>Picture from {data.date ? data.date : 'yyyy-mm-dd'} </p>
-      <p>{data.explanation ? data.explanation : 'No explanation'}</p>
-      <p>Credit & Copyright: {data.copyright ? data.copyright : 'Anonymous'}</p>
+      <h1 className="info-title">{data.title}</h1>
+      <p className="info-date">
+        | Picture from - {data.date ? formatDateToDayFirst(data.date) : 'Unknown'}{' '}
+      </p>
+      <p className="info-explanation">{data.explanation ? data.explanation : 'No explanation'}</p>
+      <p className="info-credit">
+        | Credit & Copyright - <strong>{data.copyright ? data.copyright : 'Anonymous'}</strong>
+      </p>
       <dialog ref={dialogRef} className="modal" onClick={handleBackdropClick}>
         <picture>
           <img

@@ -48,6 +48,12 @@ const About = () => {
                 Pedro Campos
               </a>
             </li>
+            <li>
+              <p>Black Hole animation </p>
+              <a href="https://codepen.io/rafaelcastrocouto" target="blank" className="social-link">
+                Rafael Castro Couto
+              </a>
+            </li>
           </ul>
         </section>
       </div>

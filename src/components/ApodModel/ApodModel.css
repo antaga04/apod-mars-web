@@ -1,0 +1,19 @@
+.info-title {
+  font-size: xx-large;
+}
+
+.info-date {
+  font-weight: 600;
+  font-size: larger;
+  color: var(--blue);
+}
+
+.info-credit {
+  font-weight: 600;
+  color: var(--detail);
+}
+
+.info-explanation {
+  font-size: large;
+  font-weight: 500;
+}

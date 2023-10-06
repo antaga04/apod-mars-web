@@ -10,7 +10,7 @@ export function toISOFormat(date) {
 }
 
 export function formatDateToDayFirst(inputDate) {
-  const reversedDate = inputDate.split('-').reverse().join('-');
+  const reversedDate = inputDate.split('-').reverse().join('/');
   return reversedDate;
 }
 
