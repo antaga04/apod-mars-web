@@ -124,16 +124,16 @@ dialog::backdrop {
 }
 
 .modal>picture>img {
-  max-height: 90vh;
-  max-width: 90vw;
+  max-height: 85vh;
+  max-width: 85vw;
   object-fit: contain;
 }
 
-#mrp .modal>picture {
+#mrp .modal {
   border: 0.12rem solid var(--detail);
 }
 
-#apod .modal>picture {
+#apod .modal {
   border: 0.12rem solid var(--blue);
 }
 
