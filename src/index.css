@@ -89,6 +89,7 @@ body {
 dialog::backdrop {
   background-color: #2229;
   backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
 }
 
 .modal-close {
@@ -120,14 +121,13 @@ dialog::backdrop {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
 }
 
 .modal>picture>img {
   /* height: 80vh;
   max-width: 85vw; */
   max-height: 80vh;
-  width: 85vw;
+  max-width: 85vw;
   object-fit: contain;
 }
 
