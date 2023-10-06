@@ -124,10 +124,8 @@ dialog::backdrop {
 }
 
 .modal>picture>img {
-  /* height: 80vh;
-  max-width: 85vw; */
-  max-height: 80vh;
-  max-width: 85vw;
+  max-height: 90vh;
+  max-width: 90vw;
   object-fit: contain;
 }
 
