@@ -4,6 +4,7 @@ import './Template.css';
 import { API_KEY, roverData } from '../../utils/data';
 import Loading from '../Loading/Loading';
 import { formatDateToDayFirst } from '../../utils/functions';
+import Message from '../Message/Message';
 
 const Template = ({ name, endpoint, Model, day }) => {
   const [rover, setRover] = useState('curiosity');
@@ -91,13 +92,7 @@ const Template = ({ name, endpoint, Model, day }) => {
               setRover={setRover}
               rover={rover}
             />
-            {error ? (
-              <div className="error-message flex-center" style={{ flex: '1', fontWeight: '700' }}>
-                {error}
-              </div>
-            ) : (
-              <Model data={data} name={name} />
-            )}
+            {error ? <Message msg={error} /> : <Model data={data} name={name} />}
           </figure>
         </section>
       )}
