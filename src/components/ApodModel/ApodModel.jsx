@@ -40,11 +40,11 @@ const ApodModel = ({ data, name }) => {
       </picture>
       <h1 className="info-title">{data.title}</h1>
       <p className="info-date">
-        | Picture from - {data.date ? formatDateToDayFirst(data.date) : 'Unknown'}{' '}
+        Picture from - {data.date ? formatDateToDayFirst(data.date) : 'Unknown'}{' '}
       </p>
       <p className="info-explanation">{data.explanation ? data.explanation : 'No explanation'}</p>
       <p className="info-credit">
-        | Credit & Copyright - <strong>{data.copyright ? data.copyright : 'Anonymous'}</strong>
+        Credit & Copyright - <strong>{data.copyright ? data.copyright : 'Anonymous'}</strong>
       </p>
       <dialog ref={dialogRef} className="modal" onClick={handleBackdropClick}>
         <picture>

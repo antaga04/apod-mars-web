@@ -6,11 +6,15 @@
   font-weight: 600;
   font-size: larger;
   color: var(--blue);
+  border-left: 1px solid var(--blue);
+  padding-inline-start: 10px;
 }
 
 .info-credit {
   font-weight: 600;
   color: var(--detail);
+  border-left: 1px solid var(--detail);
+  padding-inline-start: 10px;
 }
 
 .info-explanation {
