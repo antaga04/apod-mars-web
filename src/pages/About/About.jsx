@@ -5,8 +5,8 @@ const About = () => {
   return (
     <main className="home-page flex-center">
       <div className="introduction about">
-        <h1>About</h1>
         <section>
+        <h1>About</h1>
           <p>
             Explore the cosmos through this website, where you can discover images gathered by NASA.
           </p>
@@ -25,7 +25,7 @@ const About = () => {
         </section>
         <section>
           <h2>Atributions:</h2>
-          <ul className="decoration">
+          <ol className="decoration">
             <li>
               <p>The awesome logo of this website is from </p>
               <a
@@ -54,7 +54,7 @@ const About = () => {
                 Rafael Castro Couto
               </a>
             </li>
-          </ul>
+          </ol>
         </section>
       </div>
     </main>
