@@ -18,16 +18,6 @@ const FunctionBar = ({ name, date, setDate, setRover, rover, minDate, maxDate })
   }, [rover]);
 
   const handleDateInput = (inputDate) => {
-    const parsedDate = new Date(inputDate);
-
-    /* if (parsedDate > new Date(maxDate)) {
-      setDate(maxDate);
-    } else if (parsedDate < new Date(minDate)) {
-      setDate(minDate);
-    } else {
-      setDate(inputDate);
-    } */
-
     setDate(inputDate);
   };
 
