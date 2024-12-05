@@ -11,19 +11,17 @@ import { ThemeProvider } from './utils/ThemeContext.jsx';
 import About from './pages/About/About.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ThemeProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route index="/home" element={<Home />} />
-            <Route path="/apod" element={<Apod />} />
-            <Route path="/mrp" element={<Mars />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
-  </React.StrictMode>
+  <ThemeProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index="/home" element={<Home />} />
+          <Route path="/apod" element={<Apod />} />
+          <Route path="/mrp" element={<Mars />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
 );
